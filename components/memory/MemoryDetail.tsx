@@ -21,7 +21,7 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-gradient-to-br from-pink-25 via-rose-25 to-pink-50 overflow-y-auto">
+    <div className="inset-0 z-50 bg-gradient-to-br from-pink-25 via-rose-25 to-pink-50 overflow-y-auto">
       <div className="min-h-screen">
           {/* Header */}
           <div className="sticky top-0 z-10 bg-gradient-to-r from-pink-100/95 to-rose-100/95 backdrop-blur-sm border-b border-pink-200/50">
