@@ -52,8 +52,8 @@
     "images": [
       "/images/10.jpeg",
       "/images/11.jpeg",
-      "/images/12.jpg",
-      "/images/13.jpg",
+      "/images/12.jpeg",
+      "/images/13.jpeg",
       "/images/14.jpeg"
     ],
     "description": "솔민이와 학교 투어 & 나의 첫 선물",
@@ -71,11 +71,52 @@
     },
     "images": [
       "/images/15.jpeg",
-      "/images/16.jpg"
+      "/images/16.jpeg"
     ],
     "description": "북악스카이웨이에서 함께 1월 1일 카운트다운을 하고, 솔민이에게 처음으로 '사랑한다'는 말을 들은 잊지 못할 날.",
     "category": "anniversary",
     "weather": "맑음",
+    "music": ""
+  },
+  {
+    "id": "5",
+    "title": "솔민이와 100일",
+    "date": "2023-01-16",
+    "location": {
+      "lat": 37.7151,
+      "lng": 126.7157,
+      "name": "김포"
+    },
+    "images": [
+      "/images/17.jpeg",
+      "/images/18.jpeg"
+    ],
+    "description": "솔민이와 100일을 기념하며 첫 커플 팔찌를 맞춘 날. 케이크의 그림처럼 언제나 서로를 아껴주길.",
+    "category": "anniversary",
+    "weather": "",
+    "music": ""
+  },
+  {
+    "id": "6",
+    "title": "솔민이와 여수 여행",
+    "date": "",
+    "location": {
+      "lat": 34.7604,
+      "lng": 127.6622,
+      "name": "여수시"
+    },
+    "images": [
+      "/images/24.jpeg",
+      "/images/25.jpeg",
+      "/images/26.jpeg",
+      "/images/27.jpeg",
+      "/images/28.jpeg",
+      "/images/29.jpeg",
+      "/images/30.jpeg"
+    ],
+    "description": "솔민이와 함께한 첫 여수 여행. 비 오는 밤의 유람선, 향일암에서의 기도, 아쿠아리움까지 모든 순간이 잊지 못할 추억이야.",
+    "category": "travel",
+    "weather": "비",
     "music": ""
   }
 ]

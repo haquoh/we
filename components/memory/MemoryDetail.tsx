@@ -72,18 +72,18 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={prevImage}
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-pink-400/90 to-rose-400/90 p-2 sm:p-3 hover:from-pink-500/90 hover:to-rose-500/90 shadow-xl backdrop-blur-sm"
+                    onClick={nextImage}
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 sm:p-4 hover:bg-white shadow-2xl backdrop-blur-sm transition-all"
                   >
-                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                    <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600" />
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={nextImage}
-                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-pink-400/90 to-rose-400/90 p-2 sm:p-3 hover:from-pink-500/90 hover:to-rose-500/90 shadow-xl backdrop-blur-sm"
+                    onClick={prevImage}
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 sm:p-3 hover:bg-white/90 shadow-xl backdrop-blur-sm transition-all"
                   >
-                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-pink-500" />
                   </motion.button>
                   <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-3 bg-pink-100/20 rounded-full px-4 py-2 backdrop-blur-sm">
                     {memory.images.map((_, index) => (
@@ -115,87 +115,111 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
 
         {/* Content */}
         <div className="mx-auto max-w-4xl p-4 sm:p-6 md:p-8">
-          <div className="mb-6 sm:mb-8 grid gap-4 sm:gap-6 sm:grid-cols-2">
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-pink-100/80 to-rose-100/80 border border-pink-200/50 shadow-lg backdrop-blur-sm"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-pink-400 to-rose-400 shadow-md">
-                <Calendar className="h-6 w-6 text-white" />
+          {/* Main Info Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 sm:mb-10 space-y-6"
+          >
+            {/* Date */}
+            <div className="flex items-center gap-4">
+              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-rose-200 shadow-lg">
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-pink-700" />
               </div>
               <div>
-                <p className="text-sm font-medium text-pink-600">날짜</p>
-                <p className="font-noto-serif text-pink-800 font-semibold">
+                <p className="text-sm text-pink-500 font-medium mb-1">날짜</p>
+                <p className="text-lg sm:text-xl font-semibold text-pink-800">
                   {format(new Date(memory.date), 'yyyy년 MM월 dd일 EEEE', { locale: ko })}
                 </p>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-rose-100/80 to-pink-100/80 border border-rose-200/50 shadow-lg backdrop-blur-sm"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-rose-400 to-pink-400 shadow-md">
-                <MapPin className="h-6 w-6 text-white" />
+            {/* Location */}
+            <div className="flex items-center gap-4">
+              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-200 to-pink-200 shadow-lg">
+                <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-rose-700" />
               </div>
               <div>
-                <p className="text-sm font-medium text-rose-600">장소</p>
-                <p className="font-noto-serif text-rose-800 font-semibold">
-                  {memory.location.name}
+                <p className="text-sm text-rose-500 font-medium mb-1">장소</p>
+                <p className="text-lg sm:text-xl font-semibold text-rose-800">
+                  📍 {memory.location.name}
+                </p>
+              </div>
+            </div>
+            
+            {/* Description */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-50 via-white to-rose-50 p-6 sm:p-8 shadow-2xl border border-pink-100"
+            >
+              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-pink-200/20 to-rose-200/20 blur-3xl" />
+              <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-rose-200/20 to-pink-200/20 blur-3xl" />
+              <div className="relative">
+                <h3 className="mb-4 text-xl sm:text-2xl font-bold text-pink-800 flex items-center gap-2">
+                  <span className="text-2xl">💭</span> 우리의 이야기
+                </h3>
+                <p className="whitespace-pre-wrap text-base sm:text-lg leading-relaxed text-gray-700">
+                  {memory.description}
                 </p>
               </div>
             </motion.div>
+          </motion.div>
+          
+          {/* Additional Info Grid */}
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
             
             {memory.weather && (
               <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-pink-100/80 to-rose-100/80 border border-pink-200/50 shadow-lg backdrop-blur-sm"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="relative overflow-hidden rounded-2xl bg-white p-5 shadow-xl border border-pink-100 cursor-pointer"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-pink-400 to-rose-400 shadow-md">
-                  <Cloud className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-pink-600">날씨</p>
-                  <p className="font-noto-serif text-pink-800 font-semibold">
-                    {memory.weather}
-                  </p>
+                <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-pink-300/30 to-rose-300/30 blur-2xl" />
+                <div className="relative flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-300 to-rose-300 shadow-md">
+                    <Cloud className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-500 mb-1">날씨</p>
+                    <p className="text-lg font-semibold text-gray-800">
+                      {memory.weather === '맑음' ? '☀️' : memory.weather === '비' ? '🌧️' : memory.weather === '흐림' ? '☁️' : '🌤️'} {memory.weather}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             )}
             
             {memory.music && (
               <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-rose-100/80 to-pink-100/80 border border-rose-200/50 shadow-lg backdrop-blur-sm"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="relative overflow-hidden rounded-2xl bg-white p-5 shadow-xl border border-rose-100 cursor-pointer"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-rose-400 to-pink-400 shadow-md">
-                  <Music className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-rose-600">음악</p>
-                  <p className="font-noto-serif text-rose-800 font-semibold">
-                    {memory.music}
-                  </p>
+                <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-rose-300/30 to-pink-300/30 blur-2xl" />
+                <div className="relative flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-rose-300 to-pink-300 shadow-md">
+                    <Music className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-500 mb-1">음악</p>
+                    <p className="text-lg font-semibold text-gray-800">
+                      🎵 {memory.music}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             )}
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-pink-50/90 to-rose-50/90 p-6 sm:p-8 border-2 border-pink-200/50 shadow-xl backdrop-blur-sm"
-          >
-            <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-pink-800 font-noto-serif flex items-center gap-2">
-              💭 추억의 이야기
-            </h3>
-            <div className="prose prose-base sm:prose-lg max-w-none">
-              <p className="whitespace-pre-wrap font-noto-serif leading-relaxed text-pink-900 text-base sm:text-lg">
-                {memory.description}
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
 

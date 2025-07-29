@@ -29,6 +29,8 @@ export default function PasswordProtect({ children }: PasswordProtectProps) {
       setIsAuthenticated(true);
       sessionStorage.setItem('isAuthenticated', 'true');
       setError(false);
+      // 인증 성공 시 음악 재생 이벤트 발생
+      window.dispatchEvent(new Event('userAuthenticated'));
     } else {
       setError(true);
       setPassword('');

@@ -15,21 +15,38 @@ export default function MapMusicControl() {
       audioRef.current.volume = volume;
       audioRef.current.loop = true;
     }
+  }, [volume]);
 
-    // 인증 상태 확인 후 자동 재생 시도
+  useEffect(() => {
+    // 인증 이벤트 리스너 추가
+    const handleUserAuthenticated = () => {
+      if (audioRef.current) {
+        setTimeout(() => {
+          audioRef.current?.play().then(() => {
+            setIsPlaying(true);
+          }).catch((error) => {
+            console.log('자동 재생이 차단되었습니다:', error);
+          });
+        }, 1000);
+      }
+    };
+
+    window.addEventListener('userAuthenticated', handleUserAuthenticated);
+
+    // 이미 인증된 상태라면 바로 재생 시도
     const isAuthenticated = sessionStorage.getItem('isAuthenticated');
     if (isAuthenticated === 'true' && audioRef.current) {
-      const timer = setTimeout(() => {
-        audioRef.current?.play().then(() => {
-          setIsPlaying(true);
-        }).catch((error) => {
-          console.log('자동 재생이 차단되었습니다:', error);
-        });
-      }, 2000);
-
-      return () => clearTimeout(timer);
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((error) => {
+        console.log('자동 재생이 차단되었습니다:', error);
+      });
     }
-  }, [volume]);
+
+    return () => {
+      window.removeEventListener('userAuthenticated', handleUserAuthenticated);
+    };
+  }, []);
 
   const toggleMusic = () => {
     if (audioRef.current) {
