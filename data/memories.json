@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "title": "우리가 처음 만난 날",
+    "date": "2023-03-15",
+    "location": {
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "name": "서울시청 앞"
+    },
+    "images": ["/images/first-meeting.jpg"],
+    "description": "벚꽃이 흩날리던 봄날, 운명처럼 만난 우리. 서울시청 앞 광장에서 처음 눈이 마주쳤던 그 순간이 아직도 생생해.",
+    "category": "anniversary",
+    "weather": "맑음",
+    "music": "봄날은 간다 - 백현"
+  },
+  {
+    "id": "2",
+    "title": "한강 피크닉",
+    "date": "2023-05-05",
+    "location": {
+      "lat": 37.5293,
+      "lng": 126.9342,
+      "name": "여의도 한강공원"
+    },
+    "images": ["/images/hangang-picnic1.jpg", "/images/hangang-picnic2.jpg"],
+    "description": "어린이날 한강에서 함께한 피크닉. 치킨과 맥주, 그리고 노을까지 완벽했던 하루.",
+    "category": "date",
+    "weather": "구름 조금",
+    "music": "한강 - 이무진"
+  },
+  {
+    "id": "3",
+    "title": "제주도 여행",
+    "date": "2023-08-12",
+    "location": {
+      "lat": 33.4890,
+      "lng": 126.4983,
+      "name": "성산일출봉"
+    },
+    "images": ["/images/jeju-trip1.jpg", "/images/jeju-trip2.jpg", "/images/jeju-trip3.jpg"],
+    "description": "처음으로 함께 떠난 여행. 성산일출봉에서 본 일출은 정말 잊을 수 없어. 우리의 사랑도 저 태양처럼 빛나길.",
+    "category": "travel",
+    "weather": "맑음",
+    "music": "여행 - 볼빨간사춘기"
+  },
+  {
+    "id": "4",
+    "title": "100일 기념일",
+    "date": "2023-06-23",
+    "location": {
+      "lat": 37.5796,
+      "lng": 126.9770,
+      "name": "북촌한옥마을"
+    },
+    "images": ["/images/100days1.jpg", "/images/100days2.jpg"],
+    "description": "한복을 입고 북촌을 걸었던 100일 기념일. 전통찻집에서 마신 대추차의 달콤함만큼이나 달콤했던 시간.",
+    "category": "anniversary",
+    "weather": "흐림",
+    "music": "100일째 만남 - 지아"
+  },
+  {
+    "id": "5",
+    "title": "크리스마스 이브",
+    "date": "2023-12-24",
+    "location": {
+      "lat": 37.5651,
+      "lng": 126.9779,
+      "name": "명동성당"
+    },
+    "images": ["/images/christmas1.jpg", "/images/christmas2.jpg"],
+    "description": "첫 크리스마스를 함께 보낸 명동. 성당의 종소리와 함께 나눈 첫 '사랑해'는 영원히 기억할거야.",
+    "category": "anniversary",
+    "weather": "눈",
+    "music": "All I Want for Christmas Is You - Mariah Carey"
+  }
+]

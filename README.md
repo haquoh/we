@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 우리의 추억 지도 💕
 
-## Getting Started
+여자친구와의 소중한 추억을 지도에 담은 웹 애플리케이션입니다.
 
-First, run the development server:
+## 🌟 주요 기능
+
+### 📍 추억 지도
+- 함께한 장소들을 하트 마커로 표시
+- 클릭하면 추억의 상세 정보 확인
+- 다크모드 지원
+
+### 📅 타임라인
+- 시간순으로 추억 정리
+- 월별 그룹핑
+- 부드러운 애니메이션
+
+### 📊 통계
+- 함께한 날 수
+- 방문한 장소 수
+- 추억 카테고리별 분포
+- 자주 방문한 장소
+
+### 💝 특별한 기능들
+- 오늘의 추억 (작년 오늘)
+- 기념일 알림 (100일, 1년 등)
+- 추억 공유 기능
+- 배경음악 재생
+- 하트 파티클 애니메이션
+
+## 🚀 시작하기
 
 ```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 프로덕션 빌드
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 모바일 최적화
+- 반응형 디자인
+- PWA 지원
+- 터치 제스처 지원
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 커스터마이징
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 추억 데이터 추가
+`data/memories.json` 파일을 수정하여 추억을 추가할 수 있습니다.
 
-## Learn More
+### 색상 테마 변경
+`tailwind.config.ts`에서 색상을 커스터마이징할 수 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+### 배경음악 추가
+`public/music/background.mp3` 파일을 추가하면 배경음악이 재생됩니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 배포
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Vercel에 쉽게 배포할 수 있습니다:
 
-## Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💌 Made with Love
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+소중한 사람과의 추억을 영원히 간직하세요.

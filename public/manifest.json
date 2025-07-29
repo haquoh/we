@@ -1,0 +1,23 @@
+{
+  "name": "우리의 추억 지도",
+  "short_name": "추억지도",
+  "description": "소중한 순간들을 지도에 담아",
+  "theme_color": "#FFD6E8",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
