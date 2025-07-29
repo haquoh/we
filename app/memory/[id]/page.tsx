@@ -4,13 +4,14 @@ import memoriesData from '@/data/memories.json';
 import { Memory } from '@/lib/types/memory';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function MemoryPage({ params }: PageProps) {
-  const memory = memoriesData.find((m) => m.id === params.id) as Memory | undefined;
+export default async function MemoryPage({ params }: PageProps) {
+  const { id } = await params;
+  const memory = memoriesData.find((m) => m.id === id) as Memory | undefined;
 
   if (!memory) {
     notFound();

@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import BottomNav from "@/components/layout/BottomNav";
 import TodaysMemory from "@/components/ui/TodaysMemory";
 import AnniversaryAlert from "@/components/ui/AnniversaryAlert";
-import BackgroundMusic from "@/components/ui/BackgroundMusic";
-import DarkModeToggle from "@/components/ui/DarkModeToggle";
 import HeartParticles from "@/components/ui/HeartParticles";
+import MapMusicControl from "@/components/ui/MapMusicControl";
 
 export const metadata: Metadata = {
   title: "우리의 추억 지도",
@@ -29,15 +27,13 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body suppressHydrationWarning className="font-sans antialiased">
-        <main className="pb-16">
+        <main>
           {children}
         </main>
-        <BottomNav />
         <TodaysMemory />
         <AnniversaryAlert />
-        <BackgroundMusic />
-        <DarkModeToggle />
         <HeartParticles />
+        <MapMusicControl />
       </body>
     </html>
   );
