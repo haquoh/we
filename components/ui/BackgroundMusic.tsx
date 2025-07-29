@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
 import { Pause, Play } from 'lucide-react';
 
 export default function BackgroundMusic() {
@@ -50,9 +49,7 @@ export default function BackgroundMusic() {
   return (
     <>
       <audio ref={audioRef} src="/music/music.mp3" />
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      <button
         onClick={toggleMusic}
         className="fixed bottom-20 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg"
       >
@@ -61,7 +58,7 @@ export default function BackgroundMusic() {
         ) : (
           <Play className="h-5 w-5 text-gray-700" />
         )}
-      </motion.button>
+      </button>
     </>
   );
 }

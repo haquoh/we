@@ -2,13 +2,13 @@
 
 import dynamic from 'next/dynamic';
 import { useMemoryStore } from '@/lib/store/memory-store';
-import LoadingScreen from '@/components/ui/LoadingScreen';
-
 const Map = dynamic(
   () => import('@/components/memory/Map'),
   { 
     ssr: false,
-    loading: () => <LoadingScreen />
+    loading: () => <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+      <div className="text-pink-600 text-xl">로딩중...</div>
+    </div>
   }
 );
 

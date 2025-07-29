@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import TodaysMemory from "@/components/ui/TodaysMemory";
-import AnniversaryAlert from "@/components/ui/AnniversaryAlert";
-import HeartParticles from "@/components/ui/HeartParticles";
 import MapMusicControl from "@/components/ui/MapMusicControl";
 
 export const metadata: Metadata = {
@@ -35,9 +32,6 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <TodaysMemory />
-        <AnniversaryAlert />
-        <HeartParticles />
         <MapMusicControl />
       </body>
     </html>

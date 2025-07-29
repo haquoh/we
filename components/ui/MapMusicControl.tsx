@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Music, Pause, Play, Volume2 } from 'lucide-react';
 
 export default function MapMusicControl() {
@@ -75,40 +74,27 @@ export default function MapMusicControl() {
   return (
     <>
       <audio ref={audioRef} src="/music/music.mp3" />
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="absolute left-2 sm:left-4 top-2 sm:top-4 z-20 flex items-center gap-1 sm:gap-2"
-      >
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+      <div className="absolute left-2 sm:left-4 top-2 sm:top-4 z-20 flex items-center gap-1 sm:gap-2">
+        <button
           onClick={toggleMusic}
-          className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-to-r from-pink-400 to-rose-400 shadow-lg backdrop-blur-sm transition-all hover:from-pink-500 hover:to-rose-500 hover:shadow-xl"
+          className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-to-r from-pink-400 to-rose-400 shadow-lg backdrop-blur-sm transition-all hover:from-pink-500 hover:to-rose-500 hover:shadow-xl hover:scale-110"
         >
           {isPlaying ? (
             <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
           ) : (
             <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
           )}
-        </motion.button>
+        </button>
 
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <button
           onClick={() => setShowVolumeControl(!showVolumeControl)}
-          className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-300 to-rose-300 shadow-md backdrop-blur-sm transition-all hover:from-pink-400 hover:to-rose-400"
+          className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-300 to-rose-300 shadow-md backdrop-blur-sm transition-all hover:from-pink-400 hover:to-rose-400 hover:scale-110"
         >
           <Volume2 className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
-        </motion.button>
+        </button>
 
         {showVolumeControl && (
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            className="hidden sm:flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-sm border border-pink-200"
-          >
+          <div className="hidden sm:flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-sm border border-pink-200">
             <input
               type="range"
               min="0"
@@ -121,31 +107,17 @@ export default function MapMusicControl() {
             <span className="text-xs font-medium text-pink-600">
               {Math.round(volume * 100)}%
             </span>
-          </motion.div>
+          </div>
         )}
 
         {isPlaying && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="hidden sm:flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 shadow-md backdrop-blur-sm border border-pink-200"
-          >
+          <div className="hidden sm:flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 shadow-md backdrop-blur-sm border border-pink-200">
             <Music className="h-3 w-3 text-pink-500" />
             <span className="text-xs font-medium text-pink-600">재생 중</span>
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="h-2 w-2 rounded-full bg-pink-400"
-            />
-          </motion.div>
+            <div className="h-2 w-2 rounded-full bg-pink-400 animate-pulse" />
+          </div>
         )}
-      </motion.div>
+      </div>
     </>
   );
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 import { Memory } from '@/lib/types/memory';
 import { format } from 'date-fns';
@@ -35,13 +34,8 @@ const categoryLabels = {
 
 export default function MemoryCard({ memory, onClick }: MemoryCardProps) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.03, y: -5 }}
-      whileTap={{ scale: 0.98 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+    <div
+      className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300"
       onClick={onClick}
     >
       {memory.images[0] && (
@@ -55,13 +49,12 @@ export default function MemoryCard({ memory, onClick }: MemoryCardProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="absolute right-3 top-3">
-            <motion.span 
-              whileHover={{ scale: 1.1 }}
-              className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold text-white shadow-lg bg-gradient-to-r ${categoryColors[memory.category]} backdrop-blur-sm`}
+            <span 
+              className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold text-white shadow-lg bg-gradient-to-r ${categoryColors[memory.category]} backdrop-blur-sm hover:scale-110 transition-transform`}
             >
               <span className="text-sm">{categoryEmojis[memory.category]}</span>
               {categoryLabels[memory.category]}
-            </motion.span>
+            </span>
           </div>
           <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
             <p className="text-white text-sm font-medium line-clamp-2 drop-shadow-lg">
@@ -110,6 +103,6 @@ export default function MemoryCard({ memory, onClick }: MemoryCardProps) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
