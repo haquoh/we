@@ -21,10 +21,9 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
   };
 
   return (
-    <div
-      className="fixed inset-0 z-50 overflow-y-auto bg-gradient-to-br from-pink-25 via-rose-25 to-pink-50"
-    >
-      <div className="min-h-screen">
+    <div className="fixed inset-0 z-50 bg-gradient-to-br from-pink-25 via-rose-25 to-pink-50">
+      <div className="h-full overflow-y-auto -webkit-overflow-scrolling-touch">
+        <div className="min-h-full pb-20">
         {/* Header */}
         <div className="sticky top-0 z-10 bg-gradient-to-r from-pink-100/95 to-rose-100/95 backdrop-blur-sm border-b border-pink-200/50">
           <div className="flex items-center justify-between p-4 sm:p-6">
@@ -201,6 +200,8 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
             </div>
           </div>
       )}
+        </div>
+      </div>
     </div>
   );
 }

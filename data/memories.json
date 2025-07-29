@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "우리의 첫만남",
-    "date": "2022-10-10",
+    "date": "2022-10-09",
     "location": {
       "lat": 37.5563,
       "lng": 126.9237,
@@ -293,6 +293,31 @@
     "description": "솔민이와 함께한 첫 스냅 촬영. 한강의 야경보다 더 빛났던 너의 모습, 평생 잊지 못할 거야.",
     "category": "anniversary",
     "weather": "맑음",
+    "music": ""
+  },{
+    "id": "23",
+    "title": "가장 행복한 순간들",
+    "date": "",
+    "location": {
+      "lat": 38.2070,
+      "lng": 128.5918,
+      "name": "강원도 속초"
+    },
+    "images": [
+      "/images/61.jpeg",
+      "/images/62.jpeg",
+      "/images/63.jpeg",
+      "/images/64.jpeg",
+      "/images/65.jpeg",
+      "/images/66.jpeg",
+      "/images/67.jpeg",
+      "/images/68.jpeg",
+      "/images/69.jpeg",
+      "/images/70.jpeg"
+    ],
+    "description": "계절이 바뀌고, 장소가 달라져도 변치 않는 것. 나와 있을 때 가장 행복해 보이는 솔민이의 미소.",
+    "category": "moments",
+    "weather": "",
     "music": ""
   }
 ]
