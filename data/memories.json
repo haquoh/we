@@ -252,12 +252,47 @@
       "name": "예술의 전당"
     },
     "images": [
-      "/images/52.jpg",
-      "/images/53.jpg"
+      "/images/52.jpeg",
+      "/images/53.jpeg"
     ],
     "description": "솔민이 덕분에 처음 가본 클래식 공연. 솔민이가 좋아하는 라흐마니노프의 음악을 함께 들으며 잊지 못할 추억을 만들었다.",
     "category": "date",
     "weather": "",
     "music": "라흐마니노프 (Rachmaninoff)"
+  },{
+    "id": "15",
+    "title": "함께하는 솔민이의 두번째 생일",
+    "date": "2024-04-21",
+    "location": {
+      "lat": 37.5275,
+      "lng": 127.0275,
+      "name": "서울특별시 압구정"
+    },
+    "images": [
+      "/images/54.jpeg",
+      "/images/55.jpeg"
+    ],
+    "description": "꽃보다 아름다운 솔민이와 함께한 두번째 생일. 부족한 나에게 천사같은 미소로 화답해주어 세상 가장 행복했던 날.",
+    "category": "anniversary",
+    "weather": "맑음",
+    "music": ""
+  },{
+    "id": "16",
+    "title": "우리의 2주년 스냅 촬영",
+    "date": "2024-10-09",
+    "location": {
+      "lat": 37.5098,
+      "lng": 126.9822,
+      "name": "동작대교"
+    },
+    "images": [
+      "/images/56.jpg",
+      "/images/57.jpg",
+      "/images/58.jpg"
+    ],
+    "description": "솔민이와 함께한 첫 스냅 촬영. 한강의 야경보다 더 빛났던 너의 모습, 평생 잊지 못할 거야.",
+    "category": "anniversary",
+    "weather": "맑음",
+    "music": ""
   }
 ]
