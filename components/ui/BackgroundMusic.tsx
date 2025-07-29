@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Music, Pause, Play } from 'lucide-react';
+import { Pause, Play } from 'lucide-react';
 
 export default function BackgroundMusic() {
   const [isPlaying, setIsPlaying] = useState(false);

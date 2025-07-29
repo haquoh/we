@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useMemoryStore } from '@/lib/store/memory-store';
 import LoadingScreen from '@/components/ui/LoadingScreen';

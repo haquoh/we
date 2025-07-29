@@ -7,8 +7,10 @@ import { useMemoryStore } from '@/lib/store/memory-store';
 import { checkAnniversary } from '@/lib/utils/special-features';
 import Confetti from 'react-confetti';
 
+import { Anniversary } from '@/lib/utils/special-features';
+
 export default function AnniversaryAlert() {
-  const [anniversary, setAnniversary] = useState<any>(null);
+  const [anniversary, setAnniversary] = useState<Anniversary | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
   const memories = useMemoryStore((state) => state.memories);
 

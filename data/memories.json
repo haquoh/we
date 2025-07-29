@@ -39,5 +39,43 @@
     "category": "travel",
     "weather": "맑음",
     "music": ""
+  },
+  {
+    "id": "3",
+    "title": "솔민이와 보내는 첫 겨울",
+    "date": "2022-12-15",
+    "location": {
+      "lat": 37.5611,
+      "lng": 126.8373,
+      "name": "서울특별시 발산역"
+    },
+    "images": [
+      "/images/10.jpeg",
+      "/images/11.jpeg",
+      "/images/12.jpg",
+      "/images/13.jpg",
+      "/images/14.jpeg"
+    ],
+    "description": "솔민이와 학교 투어 & 나의 첫 선물",
+    "category": "anniversary",
+    "weather": "맑음"
+  },
+  {
+    "id": "4",
+    "title": "새해 첫날, 첫 사랑 고백",
+    "date": "2023-01-01",
+    "location": {
+      "lat": 37.6094,
+      "lng": 126.9723,
+      "name": "서울특별시 북악스카이웨이"
+    },
+    "images": [
+      "/images/15.jpeg",
+      "/images/16.jpg"
+    ],
+    "description": "북악스카이웨이에서 함께 1월 1일 카운트다운을 하고, 솔민이에게 처음으로 '사랑한다'는 말을 들은 잊지 못할 날.",
+    "category": "anniversary",
+    "weather": "맑음",
+    "music": ""
   }
 ]

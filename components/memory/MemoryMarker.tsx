@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation';
 import { Marker, Popup } from 'react-leaflet';
-import { Heart } from 'lucide-react';
 import L from 'leaflet';
 import { Memory } from '@/lib/types/memory';
 import { format } from 'date-fns';

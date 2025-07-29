@@ -8,10 +8,11 @@ import { getTodaysMemory } from '@/lib/utils/special-features';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import { useRouter } from 'next/navigation';
+import { Memory } from '@/lib/types/memory';
 
 export default function TodaysMemory() {
   const [isVisible, setIsVisible] = useState(false);
-  const [todaysMemory, setTodaysMemory] = useState<any>(null);
+  const [todaysMemory, setTodaysMemory] = useState<Memory | null>(null);
   const memories = useMemoryStore((state) => state.memories);
   const router = useRouter();
 
