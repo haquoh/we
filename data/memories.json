@@ -99,7 +99,7 @@
   {
     "id": "6",
     "title": "솔민이와 여수 여행",
-    "date": "",
+    "date": "2023-02-14",
     "location": {
       "lat": 34.7604,
       "lng": 127.6622,
@@ -118,5 +118,146 @@
     "category": "travel",
     "weather": "비",
     "music": ""
+  },
+  {
+    "id": "7",
+    "title": "첫 캐리비안 베이 더블데이트",
+    "date": "2023-07-15",
+    "location": {
+      "lat": 37.2947,
+      "lng": 127.2045,
+      "name": "용인 캐리비안 베이"
+    },
+    "images": [
+      "/images/31.jpeg",
+      "/images/32.jpeg"
+    ],
+    "description": "솔민이와 함께한 첫 더블데이트이자 첫 캐리비안 베이. 물놀이하는 모습도 너무 예뻤던 하루.",
+    "category": "date",
+    "weather": "흐림",
+    "music": ""
+  },
+  {
+    "id": "8",
+    "title": "솔민이와 첫 인천",
+    "date": "2023-08-20",
+    "location": {
+      "lat": 37.4563,
+      "lng": 126.7052,
+      "name": "인천시"
+    },
+    "images": [
+      "/images/33.jpeg",
+      "/images/34.jpeg"
+    ],
+    "description": "솔민이와 함께한 첫 인천 나들이. 아름다운 노을을 함께 바라보며 잊지 못할 추억을 만들었어.",
+    "category": "travel",
+    "weather": "맑음",
+    "music": ""
+  },{
+    "id": "9",
+    "title": "명동성당 데이트",
+    "date": "2023-09-15",
+    "location": {
+      "lat": 37.5633,
+      "lng": 126.9872,
+      "name": "명동성당"
+    },
+    "images": [
+      "/images/37.jpeg",
+      "/images/38.jpeg",
+      "/images/39.jpeg"
+    ],
+    "description": "솔민이와 함께한 명동 데이트. 고즈넉한 명동성당의 밤 풍경이 아름다웠던 날.",
+    "category": "date",
+    "weather": "맑음",
+    "music": ""
+  },{
+    "id": "10",
+    "title": "솔민이와의 1주년",
+    "date": "2023-10-09",
+    "location": {
+      "lat": 37.5301,
+      "lng": 127.1238,
+      "name": "서울특별시 강동구"
+    },
+    "images": [
+      "/images/40.jpeg",
+      "/images/41.jpeg"
+    ],
+    "description": "솔민이와 함께한 감격의 1주년. 우리의 시간이 이대로 멈추었으면 하고 바랄 만큼 행복했던 날.",
+    "category": "anniversary",
+    "weather": "",
+    "music": ""
+  },{
+    "id": "11",
+    "title": "도리마을 가을 데이트",
+    "date": "2023-11-10",
+    "location": {
+      "lat": 35.7851,
+      "lng": 129.1232,
+      "name": "경주시 도리마을"
+    },
+    "images": [
+      "/images/42.jpeg",
+      "/images/43.jpeg",
+      "/images/44.jpeg"
+    ],
+    "description": "노란 은행나무 숲이 장관이었던 도리마을에서 함께한 가을. 평생 잊지 못할 아름다운 추억.",
+    "category": "travel",
+    "weather": "맑음",
+    "music": ""
+  },{
+    "id": "12",
+    "title": "솔민이와 두번째 크리스마스",
+    "date": "2023-12-25",
+    "location": {
+      "lat": 37.5735,
+      "lng": 126.9789,
+      "name": "서울특별시 종로구"
+    },
+    "images": [
+      "/images/47.jpeg",
+      "/images/48.jpeg"
+    ],
+    "description": "서로를 위한 케이크를 만들며 보낸 우리의 두번째 크리스마스. 함께여서 더 따뜻하고 특별했던 하루.",
+    "category": "anniversary",
+    "weather": "",
+    "music": "Mistletoe - Justin Bieber"
+  },{
+    "id": "13",
+    "title": "함께 본 2023년의 마지막 노을",
+    "date": "2023-12-31",
+    "location": {
+      "lat": 37.5662,
+      "lng": 126.8837,
+      "name": "서울특별시 하늘공원"
+    },
+    "images": [
+      "/images/49.jpeg",
+      "/images/50.jpeg",
+      "/images/51.jpeg"
+    ],
+    "description": "솔민이가 먼저 보러 가자고 제안했던 2023년의 마지막 노을. 앞으로 100번은 더 함께 보고 싶은, 아름답고 소중한 순간이었어.",
+    "category": "anniversary",
+    "weather": "맑음",
+    "music": ""
+  },{
+    "id": "14",
+    "title": "첫 클래식 공연 데이트",
+    "date": "2024-01-20",
+    "location": {
+      "lat": 37.4786,
+      "lng": 127.0114,
+      "name": "예술의 전당"
+    },
+    "images": [
+      "/images/52.jpg",
+      "/images/53.jpg"
+    ],
+    "description": "솔민이 덕분에 처음 가본 클래식 공연. 솔민이가 좋아하는 라흐마니노프의 음악을 함께 들으며 잊지 못할 추억을 만들었다.",
+    "category": "date",
+    "weather": "",
+    "music": "라흐마니노프 (Rachmaninoff)"
   }
 ]

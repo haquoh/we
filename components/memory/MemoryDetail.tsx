@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MapPin, Cloud, Music, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Calendar, MapPin, Cloud, Music, ChevronRight, X } from 'lucide-react';
 import { Memory } from '@/lib/types/memory';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
@@ -19,10 +19,6 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % memory.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + memory.images.length) % memory.images.length);
   };
 
   return (
@@ -68,44 +64,19 @@ export default function MemoryDetail({ memory, onClose }: MemoryDetailProps) {
               />
               
               {memory.images.length > 1 && (
-                <>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={nextImage}
-                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 sm:p-4 hover:bg-white shadow-2xl backdrop-blur-sm transition-all"
-                  >
-                    <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600" />
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={prevImage}
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 sm:p-3 hover:bg-white/90 shadow-xl backdrop-blur-sm transition-all"
-                  >
-                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-pink-500" />
-                  </motion.button>
-                  <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-3 bg-pink-100/20 rounded-full px-4 py-2 backdrop-blur-sm">
-                    {memory.images.map((_, index) => (
-                      <motion.button
-                        key={index}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`h-3 w-3 rounded-full transition-all shadow-lg ${
-                          index === currentImageIndex 
-                            ? 'w-10 bg-gradient-to-r from-pink-300 to-rose-300' 
-                            : 'bg-pink-200/70 hover:bg-pink-300/70'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={nextImage}
+                  className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/95 p-4 sm:p-5 hover:bg-white shadow-2xl backdrop-blur-sm transition-all"
+                >
+                  <ChevronRight className="h-8 w-8 sm:h-10 sm:w-10 text-pink-600" />
+                </motion.button>
               )}
               
               {/* Image counter */}
-              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-pink-100/90 rounded-full px-3 py-1 sm:px-4 sm:py-2 backdrop-blur-sm">
-                <span className="text-xs sm:text-sm font-medium text-pink-800">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/90 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 backdrop-blur-sm shadow-lg">
+                <span className="text-sm sm:text-base font-bold text-pink-600">
                   {currentImageIndex + 1} / {memory.images.length}
                 </span>
               </div>
